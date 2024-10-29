@@ -41,7 +41,7 @@ function GiveItem(src, item, amt)
     if SDC.Framework == "qb-core" then
         local Player = QBCore.Functions.GetPlayer(src)
         Player.Functions.AddItem(item, amt)
-        TriggerClientEvent("inventory:client:ItemBox", src, item, "add")
+        TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items[item], "add")
     elseif SDC.Framework == "esx" then
         local xPlayer = ESX.GetPlayerFromId(src)
         xPlayer.addInventoryItem(item, amt)
@@ -52,7 +52,7 @@ function RemoveItem(src, item, amt)
     if SDC.Framework == "qb-core" then
         local Player = QBCore.Functions.GetPlayer(src)
         Player.Functions.RemoveItem(item, amt)
-        TriggerClientEvent("inventory:client:ItemBox", src, item, "remove")
+        TriggerClientEvent("inventory:client:ItemBox", src, QBCore.Shared.Items[item], "remove")
     elseif SDC.Framework == "esx" then
         local xPlayer = ESX.GetPlayerFromId(src)
         xPlayer.removeInventoryItem(item, amt)
