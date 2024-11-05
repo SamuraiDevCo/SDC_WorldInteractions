@@ -81,6 +81,20 @@ AddEventHandler("SDWI:Client:Notification", function(msg, extra)
 		exports['mythic_notify']:SendAlert('inform', msg)
 	elseif SDC.NotificationSystem == 'okoknotify' then
 		exports['okokNotify']:Alert(SDC.Lang.WorldInteractions, msg, 3000, 'neutral')
+    elseif SDC.NotificationSystem == 'ox_lib' then
+        if extra == "primary" then
+            lib.notify({
+                title = SDC.Lang.WorldInteractions,
+                description = msg,
+                type = "inform"
+            })
+        else
+            lib.notify({
+                title = SDC.Lang.WorldInteractions,
+                description = msg,
+                type = extra
+            })
+        end
 	elseif SDC.NotificationSystem == 'print' then
 		print(msg)
 	elseif SDC.NotificationSystem == 'framework' then

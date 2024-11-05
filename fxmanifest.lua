@@ -3,7 +3,7 @@ games { 'gta5' }
 
 author 'HoboDevCo#3011'
 description 'SDC | World Interaction Script'
-version '1.0.2'
+version '1.0.3'
 
 shared_script {
     '@ox_lib/init.lua',

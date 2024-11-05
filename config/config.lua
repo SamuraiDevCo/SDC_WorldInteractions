@@ -4,8 +4,8 @@ SDC = {}
 -------------------------------Important Configs---------------------------------
 ---------------------------------------------------------------------------------
 SDC.Framework = "qb-core" --Either "qb-core" or "esx"
-SDC.Target = "none" --Can be one of these (If "none" is selected it will use TextUi): ["qb-target","ox-target","none"]
-SDC.NotificationSystem = "framework" -- ['mythic_old', 'mythic_new', 'tnotify', 'okoknotify', 'print', 'framework', 'none'] --Notification system you prefer to use
+SDC.Target = "qb-target" --Can be one of these (If "none" is selected it will use TextUi): ["qb-target","ox-target","none"]
+SDC.NotificationSystem = "framework" -- ['mythic_old', 'mythic_new', 'tnotify', 'okoknotify', 'ox_lib', 'print', 'framework', 'none'] --Notification system you prefer to use
 SDC.UseProgBar = "ox_lib" --If you want to use a progress bar resource, options: ["progressBars", "mythic_progbar", "ox_lib", "none"]
 
 SDC.DispatchSystem = "none" --Can be one of these (If "none" it will use built in police notification) ["none", "cd_dispatch", "ps-dispatch"]
