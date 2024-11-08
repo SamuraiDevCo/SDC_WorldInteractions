@@ -129,6 +129,6 @@ AddEventHandler("SDWI:Client:Meters:DoRobAnim", function()
         ClearPedTasksImmediately(ped)
         waitingMeter = nil
 
-        TriggerServerEvent("SDWI:Client:Meters:FinishedRobbingMeter")
+        TriggerServerEvent("SDWI:Server:Meters:FinishedRobbingMeter")
     end
 end)
